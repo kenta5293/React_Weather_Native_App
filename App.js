@@ -1,4 +1,5 @@
 import React from 'react';
+import { Alert } from 'react-native';
 import Loading from './Loading';
 import * as Location from 'expo-location';
 
@@ -7,14 +8,26 @@ import * as Location from 'expo-location';
 // }
 
 export default class extends React.Component {
+  state = {
+    isLoading: true,
+  };
+
   getLocation = async () => {
-    const location = await Location.getCurrentPositionAsync();
-    console.log(location);
+    try {
+      await Location.requestPermissionsAsync();
+      const {
+        coords: { latitude, longitude },
+      } = await Location.getCurrentPositionAsync();
+      this.setState({ isLoading: false });
+    } catch (error) {
+      Alert.alert('오류가 발생했어요', '위치권한이 필요해요.');
+    }
   };
   componentDidMount() {
     this.getLocation();
   }
   render() {
-    return <Loading />;
+    const { isLoading } = this.state;
+    return isLoading ? <Loading /> : null;
   }
 }
