@@ -13,25 +13,25 @@ const weatherOptions = {
   },
   Thunderstorm: {
     iconName: 'weather-lightning',
-    gradient: ['#BBD2C5', '#536976', '#292E49'],
+    gradient: ['#373B44', '#4286f4'],
     title: 'Thunderstorm',
     subTitle: 'Now it is a Thunderstorm',
   },
   Drizzle: {
     iconName: 'weather-rainy',
-    gradient: ['#5da1ec', '#6bdeb9'],
+    gradient: ['#89F7FE', '#66A6FF'],
     title: 'Drizzle',
     subTitle: 'Now it is a Drizzle',
   },
   Rain: {
     iconName: 'weather-pouring',
-    gradient: ['#3265a2', '#4a617e'],
+    gradient: ['#00C6FB', '#005BEA'],
     title: 'Rain',
     subTitle: 'Now it is a Rain',
   },
   Snow: {
     iconName: 'weather-snowy-heavy',
-    gradient: ['#a3a3a3', '#f5f5f5'],
+    gradient: ['#7DE2FC', '#B9B6E5'],
     title: 'Snow',
     subTitle: 'Now it is a Snow',
   },
@@ -43,25 +43,25 @@ const weatherOptions = {
   },
   Clear: {
     iconName: 'weather-sunny',
-    gradient: ['#ffcb17', '#1f88ff'],
+    gradient: ['#FF7300', '#FEF253'],
     title: 'Clear',
     subTitle: 'Now it is a Clear',
   },
   Clouds: {
     iconName: 'weather-cloudy',
-    gradient: ['#a3a3a3', '#6DD5FA'],
+    gradient: ['#D7D2CC', '#304352'],
     title: 'Clouds',
     subTitle: 'Now it is a Clouds',
   },
   Mist: {
     iconName: 'weather-fog',
-    gradient: ['#b9ccdb', '#88878c'],
+    gradient: ['#4DA0B0', '#D39D38'],
     title: 'Mist',
     subTitle: 'Now it is a Mist',
   },
   Dust: {
     iconName: 'weather-hazy',
-    gradient: ['#b9ccdb', '#88878c'],
+    gradient: ['#4DA0B0', '#D39D38'],
     title: 'Dust',
     subTitle: 'Now it is a Dust',
   },
@@ -91,8 +91,6 @@ Weather.propTypes = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   temp: {
     fontSize: 28,
@@ -108,14 +106,18 @@ const styles = StyleSheet.create({
     fontSize: 44,
     fontWeight: '300',
     marginBottom: 16,
+    textAlign: 'left',
   },
   subTitle: {
     fontWeight: '600',
     color: '#ffffff',
     fontSize: 24,
+    textAlign: 'left',
   },
   textContainer: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
     alignItems: 'flex-start',
+    justifyContent: 'center',
+    flex: 1,
   },
 });
