@@ -1,6 +1,6 @@
 # Weather Native App
 
-노마드코더 강의를 따라 만든 React Native를 이용한 날씨 앱 만들기!
+노마드코더 강의를 따라 만든 React Native를 이용한 날씨 앱 만들기! (2021.02.17 ~ 2021.02.23)
 
 ##### React Native로 날씨앱 만들기
 
